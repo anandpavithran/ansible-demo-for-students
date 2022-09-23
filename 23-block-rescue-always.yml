@@ -1,26 +1,18 @@
 ---
-- name: demo of ignore errors
-  hosts: big
+- hosts: servera
   tasks:
-   - name: task1
-     command: ls
-   - name: task2
-     command: whoami
-     register: apple
-     #failed_when: "'root' in apple.stdout"
-   - name: task3
-     copy: src=tmp/myapp1.conf dest=/tmp
-     register: orange
-     notify: myhandler1
-     changed_when: "'root' in orange.owner"
-   - name: task4
-     debug: 
-      var: apple
-   - name: task5
-     debug: 
-      var: orange
-  handlers:
-   - name: myhandler1
-     debug: msg="TASK3 executed sucessfully"
-   
-...
+    - block:
+      - name: Copy the config file1
+        copy:
+          src: tmp/myapp1.conf
+          dest: /etc/myapp1.conf
+          owner: student
+          mode: 0644
+
+      rescue:
+        - debug:
+            msg: "The copying of app config file failed."
+      
+      always:
+        - debug:
+            msg: "This is to be executed always, No matter what!!"

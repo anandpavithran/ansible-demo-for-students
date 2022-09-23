@@ -23,3 +23,9 @@ server2.redhat.com
 ibm1.example.com
 ibm2.example.com
 
+
+[db]
+servera
+serverb
+serverc
+serverd
