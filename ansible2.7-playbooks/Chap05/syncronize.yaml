@@ -1,8 +1,0 @@
----
-- name: DEmo of webserver configuration
-  hosts: servera
-  tasks:
-   - name: Synchronize file
-     synchronize:
-      src: test
-      dest: /tmp/test

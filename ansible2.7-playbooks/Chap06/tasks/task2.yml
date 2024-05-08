@@ -1,3 +1,0 @@
-- name: Display message-2
-  debug:    
-    msg: "I am from task2-tasks"

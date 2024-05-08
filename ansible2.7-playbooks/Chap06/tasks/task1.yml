@@ -1,3 +1,0 @@
-- name: Display message-1
-  debug:
-    msg: I am from task1 -tasks

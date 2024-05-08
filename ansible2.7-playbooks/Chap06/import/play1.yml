@@ -1,5 +1,0 @@
-- hosts: servera
-  tasks:
-   - name: Display message
-     debug:
-      msg: I am from play1
