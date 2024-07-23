@@ -1,6 +1,6 @@
 ---
   - name: use vhost role playbook
-    hosts: webservers
+    hosts: all
 
     pre_tasks:
       - debug: msg='Begning web server configuration.'
