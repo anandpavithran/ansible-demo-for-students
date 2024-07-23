@@ -1,5 +1,5 @@
 ---
 # handlers file for my firewall
   - name: restart firewalld
-    service: name=firewalld state=restarted
+    ansible.builtin.service: name=firewalld state=restarted
       
