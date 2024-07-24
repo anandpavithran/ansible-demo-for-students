@@ -1,0 +1,12 @@
+---
+ - name: demo
+   hosts: servera
+   gather_facts: no
+   tasks:
+    - name: task1
+      ansible.builtin.setup:
+      register: apple
+    - name: task2
+      ansible.builtin.debug:
+       var: apple
+...

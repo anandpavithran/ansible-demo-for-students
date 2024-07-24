@@ -1,0 +1,16 @@
+---
+- name: Demo
+  hosts: servera
+  tasks:
+   - name: task1
+     ansible.builtin.command:
+      "{{item}}"
+     loop: 
+     - id
+     - uname -r
+     - uptime
+     register: apple
+   - name: task2
+     ansible.builtin.debug:
+      var: apple
+...

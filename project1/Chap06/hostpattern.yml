@@ -1,0 +1,15 @@
+---
+- name: demo
+  #hosts: all
+  #hosts: ungrouped
+  #hosts: all:!ungrouped
+  #hosts: all:!east
+  #hosts: east:west
+  #hosts: east:&west
+  #hosts: server*
+  #hosts: '*'
+  tasks:
+   - name: task1
+     ansible.builtin.debug:
+      msg: "{{ansible_facts['fqdn']}} {{ansible_host}}"
+...

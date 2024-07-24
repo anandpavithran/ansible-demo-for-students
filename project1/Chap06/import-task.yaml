@@ -1,0 +1,12 @@
+---
+- name: Demo of import Playbook
+  hosts: servera
+  tasks: 
+    - name: From main playbook
+      debug: msg="I am from MAIN FILE"
+    - name: import task1
+      import_tasks: tasks/task1.yml
+    - name: import task2
+      import_tasks: tasks/task2.yml
+      when: ansible_facts['memfree_mb'] < 559
+...

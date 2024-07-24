@@ -1,0 +1,14 @@
+---
+- name: Demo of a playbook
+  hosts: servera
+  tasks:
+    - name: task1
+      ansible.builtin.user: 
+         name: anand
+         state: absent
+    - name: task2
+      ansible.builtin.file:
+         path: /tmp/a.txt
+         state: absent
+...
+

@@ -1,0 +1,6 @@
+- name: Display message-2
+  debug:    
+    msg: "I am from task2-tasks"
+- name: Display message-3
+  debug:    
+    msg: "I am from task2-tasks-3"

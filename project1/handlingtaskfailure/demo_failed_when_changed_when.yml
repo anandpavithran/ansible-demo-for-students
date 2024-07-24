@@ -1,0 +1,21 @@
+---
+- name: Demo
+  hosts: servera
+  tasks:
+   - name: task1
+     ansible.builtin.command: id
+   - name: task2
+     ansible.builtin.copy:
+      src: myapp1.conf
+      dest: /tmp/myapp1.conf
+     #failed_when: "'root' in apple.group" 
+     changed_when: "'root' in apple.group" 
+     register: apple
+     notify:
+      - myhandler1
+   - ansible.builtin.debug:
+      var: apple
+  handlers:
+   - name: myhandler1
+     ansible.builtin.command: ls
+...

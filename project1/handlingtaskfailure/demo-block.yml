@@ -1,0 +1,16 @@
+---
+- name: demo
+  hosts: servera
+  tasks:
+   - name: Grouped set of tasks
+     block:
+      - name: task1
+        ansible.builtin.command: id
+      - name: task2
+        ansible.builtin.command: uname -r
+      - name: task3
+        ansible.builtin.command: uptime
+     when: ansible_distribution == "RedHat"
+        
+
+...

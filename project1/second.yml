@@ -1,0 +1,15 @@
+- name: Play1
+  hosts: servera
+  become: true
+  become_method: sudo
+  tasks:
+   - name: task1
+     ansible.builtin.copy:
+      content: helloworld
+      dest: /tmp/a.txt
+- name: Play2
+  hosts: serverb
+  tasks:
+   - name: task1
+     ansible.builtin.debug:
+      msg: " hello ;$ @: world" 

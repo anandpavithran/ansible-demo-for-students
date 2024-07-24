@@ -1,0 +1,9 @@
+[east]
+servera var1=from_inventory_host
+
+[west]
+serverb
+
+
+[east:vars]
+var1=from_inventory_group

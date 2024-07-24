@@ -1,0 +1,14 @@
+---
+- name: Demo of variable
+  hosts: servera
+  tasks:
+   - name: Print a message
+     ansible.builtin.command:
+       uptime
+     register: applevar1
+   - name: print
+     ansible.builtin.debug:
+      #var: applevar1.stdout_lines
+       var: applevar1
+      #msg: "{{applevar1.stdout_lines}}"
+...

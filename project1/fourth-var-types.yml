@@ -1,0 +1,12 @@
+---
+- name: Demo of variable
+  hosts: servera
+  vars:
+   var1: httpd
+   var2: vsftpd
+  tasks:
+   - name: Print a message
+     ansible.builtin.debug:
+      #msg: "{{vars.var1}} {{vars.var2}}"
+      msg: "{{vars['var1']}} {{vars['var2']}}"
+...

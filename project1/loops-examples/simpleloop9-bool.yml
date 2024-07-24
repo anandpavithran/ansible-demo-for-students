@@ -1,0 +1,12 @@
+---
+- name: demo
+  hosts: servera
+  vars:
+   mybool: true
+   #mybool: 0
+  tasks:
+   - name: task1
+     ansible.builtin.debug:
+      msg: Helloworld
+     when: mybool
+...

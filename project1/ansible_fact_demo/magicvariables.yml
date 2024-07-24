@@ -1,0 +1,15 @@
+---
+ - name: demo
+   hosts: servera
+   tasks:
+    - name: task2
+      ansible.builtin.debug:
+       msg: "{{group_names}} "
+    - name: task2
+      ansible.builtin.debug:
+       msg: "{{groups}} "
+    - name: task2
+      ansible.builtin.debug:
+       msg: "{{inventory_hostname}}"
+      
+...

@@ -1,0 +1,13 @@
+---
+- name: demo
+  hosts: servera
+  #check_mode: no
+  #remote_user: anand
+  tasks:
+     - name: task1
+       ansible.builtin.copy:
+        content: hello1
+        dest: /tmp/a.txt
+      
+        
+...

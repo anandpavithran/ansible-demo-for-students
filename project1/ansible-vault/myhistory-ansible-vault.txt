@@ -1,0 +1,500 @@
+    1  ls /var/lib/gdm/
+    2  sudo -i
+    3  moutn
+    4  mount
+    5  cat /opt/app-root/src/jupyter_lab_config.py 
+    6  less /opt/app-root/src/jupyter_lab_config.py
+    7  cat /cloud-init/instance-data.json 
+    8  cat /cloud-init/instance-data.json |less
+    9  exit
+   10  cat /cloud-init/instance-data.json |less
+   11  cat /cloud-init/instance-data.json |less
+   12  exit
+   13  mount /dev/sr0 /mnt
+   14  sudo mount /dev/sr0 /mnt
+   15  cat /mnt/openstack/latest/meta_data.json 
+   16  sudo -i
+   17  ssh workstation; exit
+   18  ssh workstation; exit
+   19  ssh root@servera
+   20  ssh root@serverb
+   21  ssh root@serverc
+   22  which lab
+   23  vim .venv/labs/bin/lab 
+   24  lab start intro-install
+   25  cat /etc/yum.repos.d/rhel_dvd.repo 
+   26  cat /etc/yum.repos.d/additional.repo 
+   27  sudo rpm -qa ansible
+   28  sudo rpm -qa ansible-core
+   29  sudo dnf install ansible-navigator
+   30  ansible-navigator --version
+   31  podman login utility.lab.example.com
+   32  podman images
+   33  podmna ps -a
+   34  podman ps -a
+   35  ansible-navigator images
+   36  podman images
+   37  podman ps -a
+   38  podman images
+   39  ansible-navigator images
+   40  podman rmi utility.lab.example.com/ee-supported-rhel8:latest 
+   41  vim /etc/containers/registries.conf
+   42  podman logout
+   43  ansible-navigator images
+   44  podman rmi utility.lab.example.com/ee-supported-rhel8:latest 
+   45  podman logout --all
+   46  ansible-navigator images
+   47  vim .ansible-navigator.yml 
+   48  podman login utility.lab.example.com
+   49  ansible-navigator images
+   50  mkdir playbook-inventory
+   51  lab finish intro-install
+   52  lab start playbook-inventory 
+   53  cd playbook-inventory
+   54  ls
+   55  ls -a
+   56  cat ansible.cfg 
+   57  vim inventory
+   58  ansible-navigator inventory -i inventory --list
+   59  ansible-navigator inventory -i inventory 
+   60  ansible-navigator inventory -i inventory -m stdout
+   61  ansible-navigator inventory -i inventory -m stdout --list
+   62  vim inventory 
+   63  ansible-navigator inventory -i inventory -m stdout --list
+   64  vim inventory 
+   65  ansible-navigator inventory -i inventory -m stdout --list
+   66  ansible-navigator inventory -i inventory -m stdout --graph
+   67  ansible-navigator inventory -i inventory -m stdout --graph ungrouped
+   68  ansible-navigator inventory -i inventory -m stdout --graph east
+   69  ansible-navigator inventory -i inventory -m stdout --graph all
+   70  vim inventory 
+   71  ansible-navigator inventory -i inventory -m stdout --graph south
+   72  vim inventory 
+   73  ansible-navigator inventory  -m stdout --graph south
+   74  ansible-navigator inventory  -m stdout --list
+   75  ls
+   76  vim ansible.cfg 
+   77  vim /etc/ansible/hosts
+   78  vim ansible.cfg 
+   79  ansible-navigator inventory  -m stdout --list
+   80  vim ansible.cfg 
+   81  ansible-navigator inventory  -m stdout 
+   82  ansible-navigator inventory 
+   83  strace ansible-navigator inventory 
+   84  2~2~2~
+   85  2~2~2~2~
+   86  ls
+   87  2~2~2~
+   88  exit
+   89  podmna ps
+   90  podman ps
+   91  podman ps -a
+   92  podman images
+   93  podman ps
+   94  podman ps -a
+   95  podman   ps -a
+   96  suod -i
+   97  sudo -i
+   98  podman ps -a
+   99  podman ps
+  100  exit
+  101  podman ps -a
+  102  ps -aux | grep conmon
+  103  podman ps -l
+  104  watch podman ps -l
+  105  watch  -n1 podman ps -l
+  106  watch -n1 podman ps -l
+  107  exit
+  108  cd playbook-inventory
+  109  ls
+  110  podman ps
+  111  man ansible-navigator
+  112  ansible-navigator
+  113  man ansible-navigator
+  114  ansible-navigator
+  115  ansible-navigator inventory  -m stdout --graph
+  116  ansible-navigator inventory  -m stdout --host servere.lab.example.com
+  117  ansible-navigator inventory  -m stdout --host anand.lab.example.com
+  118  ls
+  119  echo $?
+  120  ls anand
+  121  echo $?
+  122  ansible-navigator inventory  -m stdout --host servere.lab.example.com
+  123  ccd
+  124  ansible-navigator images
+  125  mkdir project1
+  126  cd project1/
+  127  ansible
+  128  ansible --version
+  129  vim ansible.cfg
+  130  ansible --version
+  131  cd
+  132  mkdir myconfig
+  133  cp project1/ansible.cfg  myconfig/
+  134  ANSIBLE_CONFIG=/home/student/myconfig/ansible.cfg 
+  135  cd project1/
+  136  ansible --version
+  137  ANSIBLE_CONFIG_PATH=/home/student/myconfig/ansible.cfg 
+  138  ansible --version
+  139  export ANSIBLE_CONFIG_PATH=/home/student/myconfig/ansible.cfg 
+  140  ansible --version
+  141  export ANSIBLE_CONFIG=/home/student/myconfig/ansible.cfg 
+  142  ansible --version
+  143  cd
+  144  pwd
+  145  ansible --version
+  146  cd project1/
+  147  ansible --version
+  148  unset ANSIBLE_CONFIG
+  149  ansible --version
+  150  CD
+  151  cd
+  152  ansible --version
+  153  cd project1/
+  154  export ANSIBLE_CONFIG=/home/student/myconfig/ansible.cfg 
+  155  ls
+  156  cp ansible.cfg /home/student/.ansible.cfg
+  157  ansible --version
+  158  cd
+  159  ansible --version
+  160  cd project1/
+  161  unset ANSIBLE_CONFIG
+  162  ansible --version
+  163  cd
+  164  ansible --version
+  165  rm .ansible.cfg 
+  166  rm project1/ansible.cfg 
+  167  ansible --version
+  168  cd project1/
+  169  ansible --version
+  170  cp ../myconfig/ansible.cfg .
+  171  cp ../myconfig/ansible.cfg /home/student/.ansible.cfg
+  172  ls
+  173  ls /home/student/.ansible
+  174  ls /home/student/.ansible.cfg 
+  175  ansible --version
+  176  rm ansible.cfg 
+  177  ansible --version
+  178  cp ../.ansible.cfg ansible.cfg
+  179  cp ../.ansible.cfg .
+  180  ls
+  181  ls -a
+  182  ansible --version
+  183  rm .ansible.cfg 
+  184  rm -rvf ../myconfig
+  185  ls
+  186  ls -a
+  187  ansible-navigator images
+  188  cd
+  189  ansible-navigator images
+  190  ls -a .an*
+  191  mv .ansible-navigator.yml anand.yml
+  192  ansible-navigator images
+  193  cp anand.yml project1/ansible-navigator.yml
+  194  cd project1/
+  195  ls
+  196  vim ansible-navigator.
+  197  vim ansible-navigator.yml 
+  198  cat /etc/redhat-release 
+  199  ls
+  200  ansible-navigator images
+  201  export ANSIBLE_NAVIGATOR_CONFIG=/home/student/myconfig/ansible-navigator.yml
+  202  cd
+  203  mkdir myconfig
+  204  mv project1/ansible-navigator.yml myconfig/
+  205  ansible-navigator images
+  206  cd project1/
+  207  ls
+  208  ansible-navigator images
+  209  unset ANSIBLE_NAVIGATOR_CONFIG
+  210  ansible-navigator images
+  211  cp ../myconfig/ansible-navigator.yml .
+  212  rm -rvf  ../myconfig/
+  213  ls
+  214  ansible-navigator images
+  215  vim ansible-navigator.yml 
+  216  ls
+  217  vim ansible.cfg 
+  218  ansible-navigator 
+  219  ansible-navigator config
+  220  ssh servera
+  221  ssh root@servera
+  222  vim ansible.cfg 
+  223  ansible-navigator config 
+  224  vim ansible.cfg 
+  225  ssh servera fdisk -l
+  226  ssh servera sudo fdisk -l
+  227  ssh -t servera sudo fdisk -l
+  228  ssh devops@servera sudo fdisk -l
+  229  ssh root@servera
+  230  ssh -t servera sudo fdisk -l
+  231  ssh root@servera
+  232  vim ansible.cfg 
+  233  ansible
+  234  ansible-doc -t become -l
+  235  vim ansible.cfg 
+  236  ansible-navigator config 
+  237  vim ansible.cfg
+  238  ansible-navigator 
+  239  ansible-navigator run
+  240  ansible-navigator run --help
+  241  ls
+  242  vim inventory
+  243  ansible east -m command -a whomai
+  244  ansible east -m command -a whoami
+  245  vim ansible.cfg 
+  246  ansible east -m command -a whoami
+  247  vim ansible.cfg 
+  248  ansible east -m command -a id
+  249  vim ansible.cfg
+  250  ansible east -m command -a id
+  251  vim a.yml
+  252  ansible-navigator run a.yml 
+  253  ssh root@servera
+  254  vim a.yml
+  255  ansible-navigator run a.yml -m stdout
+  256  ssh root@servera
+  257  ansible-navigator 
+  258  ansible-navigator settings
+  259  ansible-navigator settings --help
+  260  ansible-navigator inventory -m stdout --graph
+  261  cd
+  262  cd project1/
+  263  vim first.yml
+  264  vim inventory 
+  265  ansible-navigator run first.yml -m stdout --check
+  266  ssh root@servera
+  267  vim first.yml
+  268  ansible-navigator run first.yml -m stdout --check
+  269  vim first.yml
+  270  ansible-navigator run first.yml -m stdout --syntax-check
+  271  vim first.yml
+  272  ansible-navigator run first.yml -m stdout --syntax-check
+  273  vim first.yml
+  274  ansible-navigator run first.yml -m stdout --syntax-check
+  275  ansible-navigator run first.yml -m stdout --check
+  276  vim first.yml
+  277  ansible-navigator run first.yml -m stdout --check -v
+  278  ansible-navigator run first.yml -m stdout --check -vv
+  279  ansible-navigator run first.yml -m stdout --check -vvv
+  280  ansible-navigator run first.yml -m stdout --check -vvvv
+  281  ansible-navigator run first.yml -m stdout 
+  282  ssh root@servera
+  283  cp first.yml first-revert.yml 
+  284  vim first-revert.yml 
+  285  ansible-navigator run first-revert.yml.yml -m stdout 
+  286  ansible-navigator run first-revert.yml -m stdout 
+  287  ssh root@servera
+  288  ansible-navigator doc -l
+  289  ansible-navigator doc 
+  290  ansible-navigator 
+  291  ansible-navigator collections -l
+  292  ansible-doc -l
+  293  ansible-doc -l | wc -l
+  294  ansible-navigator collections 
+  295  ansible-navigator collections -l
+  296  ansible-navigator collections -l -m stdout
+  297  ansible-navigator collections --help
+  298  ansible-navigator doc -l
+  299  ansible-navigator doc -l | wc -l
+  300  ansible-navigator collections
+  301  ansible-navigator doc -l
+  302  ansible-navigator doc copy
+  303  ansible-navigator doc firewalld
+  304  vim first.yml 
+  305  cd
+  306  pwd
+  307  vim .vimrc
+  308  source .vimrc
+  309  cd project1/
+  310  vim first.yml 
+  311  cd
+  312  vim .vimrc 
+  313  cd project1/
+  314  ls
+  315  git clone https://github.com/anandpavithran/RH294-ansible-demo
+  316  vim .vimrc 
+  317  cd project1/
+  318  vim first.yml 
+  319  vim second.yml
+  320  source /home/student/.vimrc 
+  321  vim second.yml
+  322  cd
+  323  vim .vimrc 
+  324  source .vimrrc
+  325  source .vimrc
+  326  cd project1/
+  327  vim second.yml
+  328  ansible-navigator doc copy
+  329  vim second.yml
+  330  ansible-navigator run second.yml -m stdout
+  331  vim second.yml
+  332  ansible-navigator run second.yml -m stdout
+  333  vim ansible.cfg 
+  334  vim second.yml
+  335  ansible-navigator run second.yml -m stdout
+  336  vim second.yml
+  337  ansible-navigator run second.yml -m stdout
+  338  vim second.yml
+  339  ansible-navigator run second.yml -m stdout
+  340  vim second.yml
+  341  ansible-navigator run second.yml -m stdout
+  342  vim second.yml
+  343  ansible-navigator run second.yml -m stdout
+  344  vim second.yml
+  345  ansible-navigator run second.yml -m stdout
+  346  vim second.yml
+  347  ansible-navigator run second.yml -m stdout
+  348  vim second.yml
+  349  ansible-navigator run second.yml -m stdout
+  350  vim second.yml
+  351  ls
+  352  vim third-var1......................yml
+  353  vim third-var1.yml
+  354  ansible-navigator run third-var1.yml -m stdout
+  355  vim third-var1.yml
+  356  ansible-navigator run third-var1.yml -m stdout
+  357  vim third-var1.yml
+  358  ansible-navigator run third-var1.yml -m stdout
+  359  vim third-var1.yml
+  360  ansible-navigator run third-var1.yml -m stdout
+  361  vim third-var1.yml
+  362  ansible-navigator run third-var1.yml -m stdout
+  363  vim third-var1.yml
+  364  vim inventory 
+  365  ansible-navigator run third-var1.yml -m stdout
+  366  vim inventory 
+  367  ansible-navigator run third-var1.yml -m stdout
+  368  vim inventory 
+  369  ansible-navigator run third-var1.yml -m stdout
+  370  vim inventory 
+  371  vim third-var1.yml
+  372  ansible-navigator run third-var1.yml -m stdout
+  373  vim inventory 
+  374  ansible-navigator run third-var1.yml -m stdout
+  375  vim inventory 
+  376  vim third-var1.yml 
+  377  ansible-navigator run third-var1.yml -m stdout
+  378  vim third-var1.yml 
+  379  mkdir myvars
+  380  vim myvars/a.yml
+  381  vim third-var1.yml 
+  382  ansible-navigator run third-var1.yml -m stdout
+  383  cat third-var1.yml 
+  384  mkdir host_vars
+  385  mkdir group_vars
+  386  cat inventory 
+  387  touch group_vars/east
+  388  touch group_vars/west
+  389  vim group_vars/east 
+  390  ansible-navigator run third-var1.yml -m stdout
+  391  vim third-var1.yml 
+  392  ansible-navigator run third-var1.yml -m stdout
+  393  vim third-var1.yml 
+  394  ansible-navigator run third-var1.yml -m stdout
+  395  ls
+  396  vim inventory 
+  397  ansible-navigator run third-var1.yml -m stdout
+  398  cat third-var1.yml 
+  399  ls
+  400  vim host_vars/servera
+  401  ansible-navigator run third-var1.yml -m stdout
+  402  vim inventory 
+  403  vim third-var1.yml 
+  404  ansible-navigator run third-var1.yml -e var1=from_commandline -m stdout
+  405  vim third-var1.yml 
+  406  vim myvars1.yml
+  407  ansible-navigator run third-var1.yml -m stdout
+  408  vim third-var1.yml 
+  409  ansible-navigator run third-var1.yml -m stdout
+  410  vim third-var1.yml 
+  411  ls
+  412  cp third-var1.yml fourth-var-types.yml
+  413  vim fourth-var-types.yml 
+  414  ansible-navigator run fourth-var-types.yml -m stdout
+  415  vim fourth-var-types.yml 
+  416  ansible-navigator run fourth-var-types.yml -m stdout
+  417  vim fourth-var-types.yml 
+  418  ls
+  419  cp fourth-var-types.yml fifth.yml
+  420  vim fifth.yml 
+  421  ansible-navigator run fifth.yml -m stdout
+  422  vim fifth.yml 
+  423  ansible-navigator run fifth.yml -m stdout
+  424  vim fifth.yml 
+  425  ansible-navigator run fifth.yml -m stdout
+  426  vim fifth.yml 
+  427  ansible-navigator run fifth.yml -m stdout
+  428  vim fifth.yml 
+  429  ansible-navigator run fifth.yml -m stdout
+  430  vim fifth.yml 
+  431  ansible-navigator run fifth.yml -m stdout
+  432  vim fifth.yml 
+  433  ansible-navigator run fifth.yml -m stdout
+  434  CD
+  435  cd
+  436  cd project1/
+  437  ls
+  438  mkdir ansible-vaut
+  439  mv ansible-vaut/ ansible-vault
+  440  cd ansible-vault/
+  441  cp ../ansible.cfg ../ansible-navigator.yml ../inventory .
+  442  ls
+  443  vim inventory 
+  444  ls
+  445  ansible-vault 
+  446  ansible-vault create mypass.yml
+  447  ls
+  448  mv mypass.yml myseninfo.yml
+  449  ls
+  450  cat myseninfo.yml 
+  451  ansible-vault view myseninfo.yml 
+  452  ansible-vault edit myseninfo.yml 
+  453  ansible-vault view myseninfo.yml 
+  454  ansible-vault 
+  455  ansible-vault --help
+  456  ansible-vault 
+  457  ansible-vault rekey myseninfo.yml 
+  458  ansible-vault view myseninfo.yml 
+  459  ansible-vault decrypt myseninfo.yml --output-file decrypted.yml
+  460  man ansible-vault
+  461  ansible-vault decrypt myseninfo.yml --output decrypted.yml
+  462  ls
+  463  cat decrypted.yml 
+  464  rm myseninfo.yml 
+  465  ls
+  466  ansible-vault encrypt decrypted.yml --output myseninfo.yml
+  467  ansible-vault 
+  468  vim myplaybook.yml
+  469  ls
+  470  vim myplaybook.yml
+  471  cat decrypted.yml 
+  472  vim myplaybook.yml
+  473* ansible-navigator run myplaybook.yml -m stdout -
+  474  man ansible-navigator
+  475  ansible-navigator --help
+  476  ansible-navigator run --help
+  477  nsible-navigator run --help-playbook --mode stdout
+  478  ansible-navigator run --help-playbook --mode stdout
+  479  vim mypass
+  480  ansible-navigator run myplaybook.yml --mode stdout --vault-password-file mypass 
+  481  ansible-vault edit myseninfo.yml 
+  482  vim myplaybook.yml 
+  483  ansible-navigator run myplaybook.yml --mode stdout --vault-password-file mypass 
+  484  vim myplaybook.yml 
+  485  ansible-navigator run myplaybook.yml --mode stdout --vault-password-file mypass 
+  486  ansible-navigator run myplaybook.yml --mode stdout --vault-id
+  487  ansible-navigator run myplaybook.yml --mode stdout --vault-id @prompt
+  488  ls
+  489  mv myseninfo.yml myseninfo1.yml 
+  490  mv myseninfo.yml myseninfo2.yml 
+  491  cp myseninfo1.yml myseninfo2.yml 
+  492  ls
+  493  ansible-vault edit myseninfo2.yml 
+  494  ansible-vault rekey myseninfo2.yml 
+  495  vim myplaybook.yml 
+  496  ansible-navigator run myplaybook.yml --mode stdout --vault-id @prompt
+  497  ansible-navigator run myplaybook.yml --mode stdout --vault-id one@prompt --vault-id two@prompt
+  498  ls
+  499  history 
+  500  history > myhistory-ansible-vault.txt

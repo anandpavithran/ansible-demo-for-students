@@ -1,0 +1,16 @@
+---
+- name: demo
+  hosts: all
+  tasks:
+   - name: task1
+     ansible.builtin.yum: 
+       name: vsftpd
+       state: present
+     notify:
+      - myhandler1
+  handlers: 
+   - name: myhandler1
+     ansible.builtin.service: 
+       name: vsftpd
+       state: restarted
+...

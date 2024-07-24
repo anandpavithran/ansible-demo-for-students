@@ -1,0 +1,17 @@
+---
+- name: Demo of a playbook
+  hosts: servera
+  tasks:
+    - name: task1
+      ansible.builtin.user: 
+        name: anand
+        state: present
+    - name: task2
+      ansible.builtin.copy:
+        content: helloworld
+        dest: /tmp/a.txt
+    - name: task3
+      ansible.builtin.command:
+        - id
+...
+

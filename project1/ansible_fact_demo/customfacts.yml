@@ -1,0 +1,9 @@
+---
+ - name: demo
+   hosts: servera
+   tasks:
+    - name: task2
+      ansible.builtin.debug:
+       #var: ansible_local
+       msg: "{{ansible_local['a']['oracle']['user']}}  {{ansible_local['a']['oracle']['pass']}}"
+...

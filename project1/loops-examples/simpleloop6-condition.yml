@@ -1,0 +1,15 @@
+---
+- name: Demo
+  hosts: all
+  vars:
+   myvars:
+       - httpd
+       - sftpd
+       - dialog
+  tasks:
+   - name: task1
+     ansible.builtin.debug:
+      msg: "{{item}}"
+     loop: "{{myvars}}" 
+     when: ansible_facts['fqdn'] == "servera.lab.example.com"
+...

@@ -1,0 +1,15 @@
+---
+- name: Demo
+  hosts: servera
+  vars:
+   myvars:
+       - username: test1
+         groupname: maingroup1
+       - username: test2
+         groupname: maingroup2
+  tasks:
+   - name: task1
+     ansible.builtin.debug:
+      msg: "{{item['username']}} {{item['groupname']}}"
+     loop: "{{myvars}}" 
+...

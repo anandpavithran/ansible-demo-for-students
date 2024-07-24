@@ -1,0 +1,14 @@
+---
+- name: demo
+  hosts: servera
+  #remote_user: anand
+  tasks:
+     - name: task1
+       ansible.builtin.command: id
+       register: apple
+     - name: Print
+       ansible.builtin.debug: 
+        var: apple
+      
+        
+...

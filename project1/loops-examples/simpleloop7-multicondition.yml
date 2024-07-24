@@ -1,0 +1,16 @@
+---
+- name: Demo
+  hosts: all
+  vars:
+   myvars:
+       - httpd
+       - sftpd
+       - dialog
+  tasks:
+   - name: task1
+     ansible.builtin.debug:
+      msg: "{{item}}"
+     loop: "{{myvars}}" 
+     #when: ansible_facts['fqdn'] == "servera.lab.example.com" and ansible_facts['memfree_mb'] < 559
+     when: ansible_facts['fqdn'] == "servera.lab.example.com" or ansible_facts['memfree_mb'] < 559
+...

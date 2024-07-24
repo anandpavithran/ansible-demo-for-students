@@ -1,0 +1,12 @@
+---
+- name: demo
+  hosts: all
+  tasks:
+   - name: task1
+     ansible.builtin.command: id
+   - name: task2
+     ansible.builtin.command: notacommand
+   - name: task3
+     ansible.builtin.command: uptime
+
+...

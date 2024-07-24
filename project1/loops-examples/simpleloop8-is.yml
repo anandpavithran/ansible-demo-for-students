@@ -1,0 +1,14 @@
+---
+- name: demo
+  hosts: servera
+  vars:
+  tasks:
+   - name: task1
+     ansible.builtin.debug:
+      msg: message1 declared
+     when: message1 is defined
+   - name: task2
+     ansible.builtin.debug:
+      msg: NOT WELCOME TO THE WORLD OF ANSIBLE
+     when: message1 is not defined
+...

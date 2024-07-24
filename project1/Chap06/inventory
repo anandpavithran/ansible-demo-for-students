@@ -1,0 +1,14 @@
+workstation
+
+[east]
+servera #ansible_host=resolvable name
+serverb
+
+[west]
+serverb
+
+[south]
+serverc
+
+[north]
+serverd

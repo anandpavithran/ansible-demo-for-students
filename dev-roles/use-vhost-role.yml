@@ -6,6 +6,8 @@
       - debug: msg='Begning web server configuration.'
     roles:
       - myvhost
+    vars:
+     mypkg1: from_main_file
     post_tasks:
       - debug: msg='Web server has been configured.'
         

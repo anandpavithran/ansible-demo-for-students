@@ -1,0 +1,13 @@
+- name: Play book to demo jinja expressions.
+  become: True
+  hosts: servera.lab.example.com
+  tasks:
+    - name: Test task
+      ansible.builtin.command: ls -la /home/student/
+      register: ls_out
+    - name: Copying the file over.
+      ansible.builtin.template:
+        src: templates/jinja-test.j2
+        dest: /tmp/jinja-test
+        owner: student
+        mode: 0664

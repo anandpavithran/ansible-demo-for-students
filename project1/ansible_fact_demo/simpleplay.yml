@@ -1,0 +1,9 @@
+---
+ - name: demo
+   hosts: servera
+   gather_facts: no
+   tasks:
+    - name: task1
+      ansible.builtin.debug:
+       msg: helloworld
+...

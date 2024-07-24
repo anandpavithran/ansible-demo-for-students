@@ -1,0 +1,9 @@
+---
+ - name: demo
+   hosts: servera
+   tasks:
+    - name: task1
+      ansible.builtin.debug:
+       #msg: old way of calling facts depends on parameter in ansible.cfg "{{ansible_eth0.ipv4.address}}"
+       msg: new way of calling fact "{{ansible_facts['eth0']['ipv4']['address']}}"
+...

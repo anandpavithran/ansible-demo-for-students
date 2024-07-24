@@ -1,0 +1,16 @@
+---
+- name: Demo of variable
+  hosts: servera
+  vars:
+   var1: from_playlevel
+  vars_files:
+   - myvars1.yml
+  #vars_prompt:
+  tasks:
+   - name: Declare variable
+     include_vars: myvars/a.yml
+   - name: Print a message
+     ansible.builtin.debug:
+      msg: "{{var1}}"
+      #msg: this is the value of {{var1}}
+...

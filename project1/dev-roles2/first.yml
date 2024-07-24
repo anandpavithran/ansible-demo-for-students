@@ -1,0 +1,7 @@
+- name: demo
+  hosts: serverd.lab.example.com
+  tasks:
+   - name: install
+     ansible.builtin.dnf:
+      name: httpd,dialog
+      state: present
