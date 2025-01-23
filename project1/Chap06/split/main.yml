@@ -1,0 +1,14 @@
+---
+- name: demo of importplay
+  hosts: serverd
+  tasks:
+   - name: task1
+     ansible.builtin.command: uptime
+- name: play1
+  ansible.builtin.import_playbook: install.yml
+- name: play2
+  ansible.builtin.import_playbook: deliver.yml
+- name: play3
+  ansible.builtin.import_playbook: sec.yml
+- name: play4
+  ansible.builtin.import_playbook: service.yml

@@ -1,0 +1,11 @@
+---
+- name: DEmo of webserver configuration
+  hosts: serverd
+  tasks:
+      - name: myhandler1
+        ansible.builtin.service:
+         name: httpd
+         state: started
+         enabled: yes
+        
+...

@@ -5,5 +5,7 @@
     - name: task2
       ansible.builtin.debug:
        #var: ansible_local
-       msg: "{{ansible_local['a']['oracle']['user']}}  {{ansible_local['a']['oracle']['pass']}}"
+       msg: "{{ansible_facts['ansible_local']['oracle']['JAN21']['time']}}"
+       #msg: "{{['ansible_local']['oracle']['JAN21']['time']}}"
+       #{{ansible_facts['ansible_local']['oracle']['JAN21']['DAY']}}"
 ...

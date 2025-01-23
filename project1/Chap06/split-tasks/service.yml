@@ -1,0 +1,8 @@
+---
+      - name: myhandler1
+        ansible.builtin.service:
+         name: httpd
+         state: started
+         enabled: yes
+        
+...

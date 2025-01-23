@@ -2,6 +2,7 @@
 - name: demo
   hosts: servera
   vars:
+   message1: today
   tasks:
    - name: task1
      ansible.builtin.debug:

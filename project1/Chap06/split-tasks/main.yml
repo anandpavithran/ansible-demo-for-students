@@ -1,0 +1,14 @@
+---
+- name: demo of importtask
+  hosts: serverd
+  tasks:
+   - name: task1
+     ansible.builtin.command: uptime
+   - name: task1
+     ansible.builtin.include_tasks: install.yml
+   - name: task2
+     ansible.builtin.include_tasks: deliver.yml
+   - name: task3
+     ansible.builtin.include_tasks: sec.yml
+   - name: task4
+     ansible.builtin.include_tasks: service.yml

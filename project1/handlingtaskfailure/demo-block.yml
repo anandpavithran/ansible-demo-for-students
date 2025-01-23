@@ -11,6 +11,6 @@
       - name: task3
         ansible.builtin.command: uptime
      when: ansible_distribution == "RedHat"
-        
-
+   - name: task4
+     ansible.builtin.command: ls
 ...

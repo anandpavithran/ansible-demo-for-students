@@ -1,14 +1,13 @@
 ---
 - hosts: servera
-  tasks:
-  - name: Copy the config file
-    copy:
-      src: myapp.conf
-      dest: /etc/myapp.conf
-    notify:
-      - restart_myapp
-  
   handlers:
     - name: restart_myapp
       debug:
         msg: "restart myapp"
+  tasks:
+  - name: Copy the config file
+    ansible.builtin.copy:
+      src: myapp.conf
+      dest: /tmp/myapp.conf
+    notify:
+      - restart_myapp

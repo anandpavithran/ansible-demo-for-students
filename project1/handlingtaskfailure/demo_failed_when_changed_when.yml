@@ -6,10 +6,10 @@
      ansible.builtin.command: id
    - name: task2
      ansible.builtin.copy:
-      src: myapp1.conf
-      dest: /tmp/myapp1.conf
-     #failed_when: "'root' in apple.group" 
-     changed_when: "'root' in apple.group" 
+      src: myapp.conf
+      dest: /tmp/myapp9.conf
+     failed_when: "'root' in apple.group" 
+     #changed_when: "'root' in apple.group" 
      register: apple
      notify:
       - myhandler1

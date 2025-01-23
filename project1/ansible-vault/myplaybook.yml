@@ -2,11 +2,11 @@
 - name: demo
   hosts: servera
   vars_files: 
-   - myseninfo1.yml
-   - myseninfo2.yml
+   - info1.yml
+   - info2.yml
   tasks:
    - name: Print
      ansible.builtin.debug:
-      msg: "{{myvar1}} {{myvar2}}"
+      msg: "{{userpass1}} {{userpass2}}"
    
 ...

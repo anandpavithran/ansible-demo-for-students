@@ -1,6 +1,6 @@
 ---
 - name: DEmo of webserver configuration
-  hosts: servera
+  hosts: serverd
   tasks:
       - name: Install package
         ansible.builtin.yum:

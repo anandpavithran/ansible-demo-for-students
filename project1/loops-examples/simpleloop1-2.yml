@@ -1,0 +1,12 @@
+---
+- name: Demo
+  hosts: all
+  tasks:
+   - name: task1
+     ansible.builtin.debug:
+      msg: "{{item}}"
+     with_items: 
+       - httpd
+       - sftpd
+       - dialog
+...

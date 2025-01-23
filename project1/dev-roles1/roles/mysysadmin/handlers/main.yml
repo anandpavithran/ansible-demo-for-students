@@ -1,0 +1,5 @@
+- name: myhandler1
+  ansible.builtin.service:
+   name: "{{svc}}"
+   state: started
+   enabled: yes

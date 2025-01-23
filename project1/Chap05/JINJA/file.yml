@@ -5,6 +5,6 @@
     - name: Copying the file over to the servers.
       ansible.builtin.copy:
         src: templates/mymessage
-        dest: /etc/app_param.conf
+        dest: /tmp/app_param.conf
         owner: student
         mode: 0664

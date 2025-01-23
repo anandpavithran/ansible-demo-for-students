@@ -1,0 +1,20 @@
+---
+- name: Install package
+  ansible.builtin.yum:
+   name: "{{pkg1}}"
+   state: "{{st1}}"
+- name: Deliver the page
+  ansible.builtin.copy:
+   src: index.html
+   dest: /var/www/html/
+  notify:
+   - myhandler1
+- name: Open the firewall
+  ansible.posix.firewalld:
+   service: "{{port1}}"
+   immediate: true
+   permanent: yes
+   state: enabled
+
+
+...

@@ -1,0 +1,7 @@
+---
+      - name: OPen firewall port   
+        ansible.posix.firewalld:
+         service: http
+         immediate: yes
+         permanent: yes
+         state: enabled

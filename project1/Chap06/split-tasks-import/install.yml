@@ -1,0 +1,5 @@
+---
+- name: Install package
+  ansible.builtin.yum:
+   name: httpd
+   state: present

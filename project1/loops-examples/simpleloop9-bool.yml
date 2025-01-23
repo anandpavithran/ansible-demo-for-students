@@ -2,7 +2,7 @@
 - name: demo
   hosts: servera
   vars:
-   mybool: true
+   mybool: true | bool
    #mybool: 0
   tasks:
    - name: task1

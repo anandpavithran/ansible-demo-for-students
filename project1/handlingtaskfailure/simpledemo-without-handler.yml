@@ -1,14 +1,19 @@
 ---
 - hosts: servera
+  #force_handlers: yes
+  #ignore_errors: yes
   tasks:
   - name: Copy the config file
-    copy:
+    ansible.builtin.copy:
       src: myapp.conf
-      dest: /etc/myapp.conf
+      dest: /tmp/myapp8.conf
     notify:
       - restart_myapp
+  - name: task2
+    ansible.builtin.command: notacommand
+  ignore_errors: yes
   
   handlers:
     - name: restart_myapp
-      debug:
+      ansible.builtin.debug:
         msg: "restart myapp"

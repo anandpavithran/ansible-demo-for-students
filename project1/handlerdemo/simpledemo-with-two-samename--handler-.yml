@@ -1,0 +1,26 @@
+---
+- hosts: servera
+  handlers:
+    - name: restart_myapp1
+      debug:
+        msg: "restart myapp1"
+    - name: restart_myapp2
+      debug:
+        msg: "restart myapp2"
+  tasks:
+  - name: Copy the config file1
+    ansible.builtin.copy:
+      src: myapp1.conf
+      dest: /tmp/myapp3.conf
+    notify:
+      - restart_myapp1
+  - name: Copy the config file2
+    ansible.builtin.copy:
+      src: myapp2.conf
+      dest: /tmp/myapp4.conf
+    notify:
+      - restart_myapp1
+
+#THE HANDLER WILL BE EXECUTED ONLY AFTER TASKS SECTION
+#THE HANDLER TASKS WILL BE EXECUTED IN THE SAME SEQUENCE AS MENTIONED IN THE HANDLER SECTION
+#THE HANDLER WILL GET EXECUTED ONLY ONCE ENEN THOUGH WE CALL MULTIPLE TIMES

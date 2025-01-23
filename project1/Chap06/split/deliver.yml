@@ -1,0 +1,10 @@
+---
+- name: DEmo of webserver configuration
+  hosts: serverd
+  tasks:
+      - name: Deliver the content
+        ansible.builtin.copy: 
+         content: HelloWorld
+         dest: /var/www/html/index.html
+        notify: 
+         - myhandler1

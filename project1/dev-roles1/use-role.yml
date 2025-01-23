@@ -1,0 +1,12 @@
+---
+  - name: use vhost role playbook
+    hosts: serverc.lab.example.com
+
+    pre_tasks:
+      - ansible.builtin.debug: msg='Begning web server configuration.'
+    roles:
+      - mysysadmin
+    post_tasks:
+      - ansible.builtin.debug: msg='Web server has been configured.'
+        
+        

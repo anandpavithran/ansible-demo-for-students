@@ -1,0 +1,8 @@
+---
+- name: DEmo of webserver configuration
+  hosts: serverd
+  tasks:
+      - name: Install package
+        ansible.builtin.yum:
+         name: httpd
+         state: present
